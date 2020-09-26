@@ -21,7 +21,6 @@ export class DomListener {
       this[method] = this[method].bind(this)
       // то же самое что и addEventListener
       this.$root.on(listener, this[method])
-      console.log(method)
     })
   }
 
@@ -30,7 +29,6 @@ export class DomListener {
       const method = getMethodName(listener)
 
       this.$root.off(listener, this[method])
-      console.log(method)
     })
   }
 }
